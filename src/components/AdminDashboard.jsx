@@ -20,11 +20,14 @@ const AdminDashboard = () => {
 
   const loadStats = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/stats", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await fetch(
+        "https://excited-trite-lizard.glitch.me/api/admin/stats",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -39,7 +42,7 @@ const AdminDashboard = () => {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/messages?page=${page}&limit=10`,
+        `https://excited-trite-lizard.glitch.me/api/admin/messages?page=${page}&limit=10`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -66,7 +69,7 @@ const AdminDashboard = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/messages/${id}`,
+        `https://excited-trite-lizard.glitch.me/api/admin/messages/${id}`,
         {
           method: "DELETE",
           headers: {
