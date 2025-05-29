@@ -99,6 +99,20 @@ const Projects = () => {
         "TailwindCss",
       ],
     },
+    {
+      id: 7,
+      title: "Call Center Contact Scraper",
+      description:
+        "A Python-based web scraping project to extract contact information (names, emails, phone numbers) from multiple websites for call center databases. Utilizes BeautifulSoup4, Requests, and Pandas for data parsing, cleansing, and CSV export.",
+      tags: [
+        "Python",
+        "Web Scraping",
+        "BeautifulSoup4",
+        "Pandas",
+        "Requests",
+        "Data Collection",
+      ],
+    },
   ];
 
   return (

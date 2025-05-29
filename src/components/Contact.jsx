@@ -7,12 +7,36 @@ const Contact = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can add your form submission logic
-    setStatus("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+    setStatus("");
+    
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        setStatus("Message sent successfully! I'll get back to you soon.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus(result.error || "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error('Contact form error:', error);
+      setStatus("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -68,10 +92,20 @@ const Contact = () => {
             rows='4'
             className='w-full bg-secondary p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-accent'></textarea>
         </div>
-        <button type='submit' className='btn-primary w-full'>
-          Send Message
+        <button 
+          type='submit' 
+          disabled={isSubmitting}
+          className='btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed'
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
-        {status && <p className='text-green-500 text-center mt-4'>{status}</p>}
+        {status && (
+          <p className={`text-center mt-4 ${
+            status.includes('successfully') ? 'text-green-500' : 'text-red-500'
+          }`}>
+            {status}
+          </p>
+        )}
       </form>
     </div>
   );

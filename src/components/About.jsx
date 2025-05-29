@@ -105,6 +105,19 @@ function About() {
                 />
               </svg>
             </a>
+            <a
+              href='https://www.credly.com/users/mohamed-aziz-bouzgarrou'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-text-secondary hover:text-accent transition-colors'>
+              <svg
+                className='w-8 h-8'
+                fill='currentColor'
+                viewBox='0 0 24 24'
+                aria-hidden='true'>
+                <path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.93 6.36l-4.95 9.9c-.2.4-.82.4-1.02 0l-1.94-3.89a.75.75 0 011.34-.67l1.43 2.86 4.44-8.89a.75.75 0 011.3.59 1 1 0 01-.3.7z' />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -114,59 +127,129 @@ function About() {
         <h2 className='section-title text-center mb-12'>
           Studies & Certifications
         </h2>
-        <div className='space-y-8'>
-          <div className='card'>
-            <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
-              <h3 className='text-xl font-bold text-accent'>
+
+        {/* Education Section */}
+        <div className='mb-16'>
+          <h3 className='text-2xl font-semibold mb-6'>Education</h3>
+          <div className='space-y-8'>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Cybersecurity Engineering
+                </h3>
+                <span className='text-text-secondary'>2023-Present</span>
+              </div>
+              <p className='text-text-secondary'>
+                EPI - International Multidisciplinary School - Specializing in
                 Cybersecurity Engineering
-              </h3>
-              <span className='text-text-secondary'>Present</span>
+              </p>
             </div>
-            <p className='text-text-secondary'>
-              EPI - International Multidisciplinary School - Specializing in
-              Cybersecurity Engineering
-            </p>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Bachelor's Degree in Computer Science
+                </h3>
+                <span className='text-text-secondary'>2020-2023</span>
+              </div>
+              <p className='text-text-secondary'>
+                Higher Institute of Applied Science and Technology of Sousse -
+                ISSATSo
+              </p>
+            </div>
+            {/* <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  MERN Stack Development
+                </h3>
+                <span className='text-text-secondary'>2023 - Present</span>
+              </div>
+              <p className='text-text-secondary'>
+                Practical experience in full-stack development using MongoDB,
+                Express, React, and Node.js. Built multiple web applications and
+                RESTful APIs.
+              </p>
+            </div> */}
           </div>
+        </div>
 
-          <div className='card'>
-            <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
-              <h3 className='text-xl font-bold text-accent'>
-                MERN Stack Development
-              </h3>
-              <span className='text-text-secondary'>2023 - Present</span>
+        {/* Certifications Section */}
+        <div>
+          <h3 className='text-2xl font-semibold mb-6'>Certifications</h3>
+          <div className='space-y-8'>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Cisco CCNA: Switching, Routing, and Wireless Essentials
+                </h3>
+                <span className='text-text-secondary'>2024</span>
+              </div>
+              <p className='text-text-secondary'>
+                Cisco Networking Academy - Advanced configuration and
+                troubleshooting of networks using Cisco routers and switches.
+              </p>
             </div>
-            <p className='text-text-secondary'>
-              Practical experience in full-stack development using MongoDB,
-              Express, React, and Node.js. Built multiple web applications and
-              RESTful APIs.
-            </p>
-          </div>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Microsoft Certified: Azure Fundamentals
+                </h3>
+                <span className='text-text-secondary'>2024</span>
+              </div>
+              <p className='text-text-secondary'>
+                Microsoft - Foundational knowledge of cloud concepts, core Azure
+                services, and Azure governance and compliance.
+              </p>
+            </div>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Fortinet Certified Fundamentals Cybersecurity
+                </h3>
+                <span className='text-text-secondary'>2025</span>
+              </div>
+              <p className='text-text-secondary'>
+                Fortinet NSE Certification - Core cybersecurity knowledge and
+                basic Fortinet security products usage.
+              </p>
+            </div>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Fortinet Certified Associate Cybersecurity
+                </h3>
+                <span className='text-text-secondary'>2025</span>
+              </div>
+              <p className='text-text-secondary'>
+                Fortinet NSE Certification - Intermediate understanding of
+                Fortinet network security products and threat landscape.
+              </p>
+            </div>
 
-          <div className='card'>
-            <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
-              <h3 className='text-xl font-bold text-accent'>
-                CCNA 1 & 2 Certification
-              </h3>
-              <span className='text-text-secondary'>2024</span>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Cisco CyberOps Associate
+                </h3>
+                <span className='text-text-secondary'>2025</span>
+              </div>
+              <p className='text-text-secondary'>
+                Cisco - Fundamental skills for cybersecurity operations
+                including network intrusion analysis, incident response, and
+                threat intelligence.
+              </p>
             </div>
-            <p className='text-text-secondary'>
-              Cisco Networking Academy - Comprehensive training in network
-              fundamentals, routing, switching, and network security
-            </p>
-          </div>
-
-          <div className='card'>
-            <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
-              <h3 className='text-xl font-bold text-accent'>
-                Fortinet Network Security Expert
-              </h3>
-              <span className='text-text-secondary'>2025</span>
+            <div className='card'>
+              <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-4'>
+                <h3 className='text-xl font-bold text-accent'>
+                  Nvidia: Generative AI with Diffusion Models
+                </h3>
+                <span className='text-text-secondary'>2025</span>
+              </div>
+              <p className='text-text-secondary'>
+                Nvidia Deep Learning Institute - Hands-on training in generative
+                AI using diffusion models for image synthesis.
+              </p>
             </div>
-            <p className='text-text-secondary'>
-              FCA (Fortinet Certified Associate) & FCP (Fortinet Certified
-              Professional) - Advanced expertise in Fortinet security solutions
-              and network protection
-            </p>
           </div>
         </div>
       </div>
